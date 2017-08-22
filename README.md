@@ -2,6 +2,10 @@
 
 A simple NodeJS HTTP/HTTPS server proxying client's WebDAV requests to (protected) RDM WebDAV servers.
 
+This proxy is created with a specific use case in minde:
+
+- we want to enable temporary anonymous access to (and only to) a specific data collection.  Thus, the '/' endpoint of the proxy is disabled, given that the user should provide the path of the specific data collection.  The resource behind the path may be dynamically provisioned/removed in the underlying webdav (or iRODS) system.
+
 ## configuration
 
 Note that the implementation expects that the path of the proxy's URL is exactly the same as the path of the targetting WebDAV server.  For example,

@@ -1,0 +1,10 @@
+{
+    "proxy": {
+        "target": "https://apollovlinder.uci.ru.nl",
+        "secure": false
+    },
+    "ssl": {
+        "key": "ssl/key.pem",
+        "cert": "ssl/cert.pem"
+    }
+}

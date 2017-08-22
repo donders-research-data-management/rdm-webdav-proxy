@@ -4,11 +4,17 @@ A simple NodeJS HTTP/HTTPS server proxying client's WebDAV requests to (protecte
 
 ## configuration
 
-Note that the implementation expects that the path of the proxy's URL is exactly the same as the path of the targetting WebDAV server.  For example, the following path mappings in proxy DOES NOT work!!
+Note that the implementation expects that the path of the proxy's URL is exactly the same as the path of the targetting WebDAV server.  For example,
 
 ```bash
-https://proxy/xyz/test/test.txt --> https://webdav/test/tests.txt
-https://proxy/test/test.txt --> https://webdav/test.txt
+client --> https://proxy/test/test.txt --> https://webdav/test/test.txt
+```
+
+Therefore the following path mappings in proxy DOES NOT work!!
+
+```bash
+client --> https://proxy/xyz/test/test.txt --> https://webdav/test/tests.txt
+client --> https://proxy/test/test.txt --> https://webdav/test.txt
 ```
 
 - put proxy server's certificat and key in the `ssl` directory.  If they are not presented, the proxy server will be run in non-secured mode, i.e. using the HTTP protocol.

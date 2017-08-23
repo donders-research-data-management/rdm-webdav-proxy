@@ -35,7 +35,7 @@ The server is listen on port `3000` as default.  Add `port` attribute in `config
 
 ## run with Docker
 
-The docker image is created based on the [official node:alpine](https://hub.docker.com/_/node/) image.
+The docker image is created based on the [official node:alpine](https://hub.docker.com/_/node/) image.  You may want to change the port mapping in the `docker-compose.yml` file.  By default, it maps to the port `3000` on the docker host.
 
 ```bash
 $ docker-compose build --force-rm

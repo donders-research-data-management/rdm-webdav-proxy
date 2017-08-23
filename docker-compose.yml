@@ -1,0 +1,10 @@
+version: "2"
+services:
+  node:
+    build: "."
+    image: "rdm-webdav-proxy"
+    volumes:
+      - ./log:/user/src/app/log
+      - ./ssl:/user/src/app/ssl
+    ports:
+      - "4443:3000"

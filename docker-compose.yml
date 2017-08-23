@@ -4,6 +4,7 @@ services:
     build: "."
     image: "rdm-webdav-proxy"
     volumes:
+      - ./config:/user/src/app/config
       - ./log:/user/src/app/log
       - ./ssl:/user/src/app/ssl
     ports:

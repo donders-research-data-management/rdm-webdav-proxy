@@ -8,4 +8,4 @@ services:
       - ./log:/user/src/app/log
       - ./ssl:/user/src/app/ssl
     ports:
-      - "4443:3000"
+      - "3000:3000"

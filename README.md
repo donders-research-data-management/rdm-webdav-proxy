@@ -32,3 +32,13 @@ $ npm start
 ```
 
 The server is listen on port `3000` as default.  Add `port` attribute in `config/default.conf` if you want to change it.  The client access log is stored in `log` directory, and will be rotated every 7 days.
+
+## run with Docker
+
+The docker image is created based on the [official node:alpine](https://hub.docker.com/_/node/) image.
+
+```bash
+$ docker-compose build --force-rm
+
+$ docker-compose up -d
+``` 
